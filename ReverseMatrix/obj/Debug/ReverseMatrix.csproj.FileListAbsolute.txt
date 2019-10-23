@@ -1,0 +1,7 @@
+C:\Users\KNIGH\Desktop\Vich Math\ReveseMatrix\ReverseMatrix\bin\Debug\ReverseMatrix.exe.config
+C:\Users\KNIGH\Desktop\Vich Math\ReveseMatrix\ReverseMatrix\bin\Debug\ReverseMatrix.exe
+C:\Users\KNIGH\Desktop\Vich Math\ReveseMatrix\ReverseMatrix\bin\Debug\ReverseMatrix.pdb
+C:\Users\KNIGH\Desktop\Vich Math\ReveseMatrix\ReverseMatrix\obj\Debug\ReverseMatrix.csprojAssemblyReference.cache
+C:\Users\KNIGH\Desktop\Vich Math\ReveseMatrix\ReverseMatrix\obj\Debug\ReverseMatrix.csproj.CoreCompileInputs.cache
+C:\Users\KNIGH\Desktop\Vich Math\ReveseMatrix\ReverseMatrix\obj\Debug\ReverseMatrix.exe
+C:\Users\KNIGH\Desktop\Vich Math\ReveseMatrix\ReverseMatrix\obj\Debug\ReverseMatrix.pdb
