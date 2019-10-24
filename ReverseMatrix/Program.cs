@@ -11,6 +11,7 @@ namespace ReverseMatrix
         static void Main(string[] args)
         {
             Matrix A = new Matrix();
+            A.Reverse();
             A.Display();
             Console.ReadKey();
         }
