@@ -49,6 +49,8 @@ namespace ReverseMatrix
             }
         }
 
+        //Нахождение обратной матрицы методом умножения обратных 
+        //треугольных матриц В и Т
         public void Reverse()
         {
             int RowCol = (int)Math.Sqrt(A.Length);
@@ -82,6 +84,7 @@ namespace ReverseMatrix
                     T[i][j] = elT(i, j, B, T);
             }
         }
+        //Формула для нахождения эл. матрицы В
         private float elB(int Row, int Col, float[][] B, float[][] T)
         {
             float Result = A[Row, Col];
@@ -93,6 +96,7 @@ namespace ReverseMatrix
 
             return Result;
         }
+        //Формула для нахождения эл. матрицы Т
         private float elT(int Row, int Col, float[][] B, float[][] T)
         {
             float Result = A[Row, Col];
@@ -105,8 +109,7 @@ namespace ReverseMatrix
             return Result / B[Row][Row];
         }
 
-        //Нахождение обратных матриц, матриц В и Т
-        //Ошибка где-то тут
+        //Нахождение обратной матрицы Т
         private float[][] ReverseT(float[][] T)
         {
             float[][] ReverseT = new float[T.Length][];
@@ -122,6 +125,7 @@ namespace ReverseMatrix
 
             return ReverseT;
         }
+        //Нахождение эл. обратной матрицы Т
         private float elRevT(int Row, int Col, float[][] T, float[][] Y)
         {
             float Res = -T[Row][Col];
@@ -131,6 +135,7 @@ namespace ReverseMatrix
             }
             return Res;
         }
+        //Нахождение обратной матрицы В
         private float[][] ReverseB(float[][] B)
         {
             float[][] ReverseB = new float[B.Length][];
@@ -139,16 +144,17 @@ namespace ReverseMatrix
 
             for (int i = 0; i < ReverseB.Length; i++)
                 for (int j = ReverseB[i].Length - 1; j >= 0; j--)
-                    ReverseB[i][j] = (i == j) ? 1 / B[i][i] : elRevB(i, j, B, ReverseB) / B[i][i];
+                    ReverseB[i][j] = (i != j) ? elRevB(i, j, B, ReverseB) / B[j][j] : 1 / B[j][j];
 
             return ReverseB;
         }
+        //Нахождение эл. обратной матрицы В
         private float elRevB(int Row, int Col, float[][] B, float[][] X)
         {
             float Res = 0;
-            for (int i = Row + 1; i <= Col; i++)
+            for (int i = Col + 1; i <= Row; i++)
             {
-                Res -= X[i][Col] * B[Row][i];
+                Res -= X[Row][i] * B[i][Col];
             }
             return Res;
         }
